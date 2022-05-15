@@ -1,5 +1,6 @@
 import static org.junit.jupiter.api.Assertions.*;
 
+
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -127,8 +128,42 @@ class TestGeometria {
 		}
 		
 		
-		
+		@Test
+		public void testGetid() {
+			geometria.setId(0);
+			int resultado = geometria.getId();
+			int esperado = 0;
+			assertEquals(esperado, resultado);
+		}
 
+		
+	
+		@Test
+		public void testGetNom() {
+			geometria.setNom("Lola");
+			String resultado = geometria.getNom();
+			String esperado = "Lola";
+			assertEquals(esperado, resultado);
+			
+		}
+	
+		@Test
+		public void testGetArea() {
+			geometria.setArea(0.0);
+			double resultado = geometria.getArea();
+			double esperado = 0.0;
+			assertEquals(esperado, resultado);
+			
+		}
+		
+		@Test
+		public void testString() {
+			geometria.toString();
+			String resultado = geometria.toString();
+			String esperado = "Geometria [id=9, nom=Default, area=0.0]";
+			assertEquals(esperado, resultado);
+		}
+		
 		
 		
 	
